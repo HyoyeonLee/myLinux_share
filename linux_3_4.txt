@@ -1,0 +1,136 @@
+******************************
+*			     *
+*  LINUX_LECTURE_NOTE 3 ~ 4  *
+*                            *
+******************************
+
+
+****1. Turn off linux machine
+	$poweroff
+	$halt ~p
+	$shutdown -P now
+	$init 0
+****2. Close/Clear terminal 
+	$exit
+	$clear
+****3. command lists
+	$history
+	$!5
+****4. find by filename (current dir, all)
+	$find ./* -name "*.txt"
+	$find . / -name "*.txt"
+****5. env variables 
+	echo $VAR_NAME
+	(results are listed in env_vars.txt)
+****6. .bashrc file edit
+[???]
+****7. shell script (ex)
+	[ex.sh]
+		#!/bin/sh
+		echo "user name : "  $USER
+		echo "home dir  : "  $HOME
+		exit 0
+	[execute]
+		hylee@DESKTOP-OQ0D159 MINGW64 ~/linux_tips
+		$ sh ex.sh
+		user name :
+		home dir  :  /c/Users/hylee/AppData/Roaming/SPB_Dat
+****8. user vs. root
+	# (root)
+	$ (user)
+	---> users' passwd in /etc/passwd --> each line means
+		username : pw : userID : groupID : additional : homedir : basicshell
+	---> root's passwd --> groupID = userID = 0
+****9.ls : list
+	ls -a  : hidden
+	ls -l  : detail
+	ls -al
+	ls -alF: all files
+****10.cd : change dir
+****11. pwd : current directory
+****12.touch filename : 
+	create a file with 0 size "OR" 
+	update the updated time of the existing file
+****13.mk/rmdir : create/remove directory
+	rmdir -f dir : force
+	rmdir -i dir : message for checking
+	rmdir -r dir : remove the directory with all included in that folder
+****14.cp : copy
+	cp file1 file2
+	cp -r dir1 dir2
+****15. mv : move to other place or rename
+****16. file filename : show the type of the file
+****17. cat : (conCATenate : print the file on the screen)
+****18. more : print text file with a page unit 
+	(spacebar : next page)
+****19. OWNERSHIP
+	-    rw-r--r--   1      root    root         0      06/30/2021 11:56   ex.txt
+	type permission #links  owner   owner group size   updated time        filename
+	permission (3 each):owner(user)/group/other
+	permission (3 types) : read/write/execute(x) : r-- == 100	
+****20. chmod : change permission
+	chmod 777 ex.sh : allow all to rw
+	chmod 644 ex.sh : 
+	chmod u+x ex.sh : allow owner(user) to x
+****21. chown : change ownership
+	chown ubuntu ex.sh : ubuntu users(X group) own the file now.
+	chown ubuntu.ubuntu ex.sh : ubuntu users and groups own the file
+	chgrp ubuntu ex.sh : ubuntu group(X users) owns the file now.
+****22. symbolic vs. hard link
+	symbolic : (==shortcut) 
+		only contains the path to that file/dir 
+		nothing to do with the original size
+		if org is removed, symbolic link blinks, notifying the status
+		ln -s orgname linkname
+	hard : (==copy with different name)
+		same size/contents
+		not affected by org removed.
+		ln orgname linkname
+****23. zip vs. tar
+	name.zip [zip] : compress files into a zip file
+	name.tar.gz "OR" name.tgz [tar->gzip] : bind multiple files and then compress.
+	[tar]
+		tar -c : bind
+		tar -x : unbind 
+		tar -t : check the binded ones
+		tar -f : NECESSARY!!! designate tar file
+		tar -v : verbose (show the process in detail)
+		tar -z : use gzip with tar
+		tar -j : use bzip with tar
+	[ex]
+		tar cvf outfname infnames  :bind(zip)
+		tar xvf outfname           :unbind(unzip)
+	[gzip] standard zip for linux
+		gzip -d : decompress
+		gzip -c : leave orginals
+		gzip -n : n = 1~9 -> lower n : faster : less compress rate
+		gzip -l : show info of compressed files
+		gzip -r : compress all files contained in the targeted dir
+		gzip -v : verbose
+	[bzip2] higher compress rate
+	 	bzip2 -d : decompress
+                bzip2 -k : leave orginals
+                bzip2 -s : slower : less memory consumption
+                bzip2 -f : override if the file with the same outfname exists
+                bzip2 -v : verbose
+	[zip]
+		zip -r : compress everything contained in the dir
+		zip -P : set passwd
+		
+	[ex2]
+		1) create files f1,f2,f3
+		2) tar -cvf files.tar f*
+		3) gzip giles.tar
+		4) tar -xf files.tar.gz
+****24. grep
+	grep -c : #rows containing key
+	grep -n : line number
+	grep -r : search all the subdirs
+	grep -v : print rows NOT containing key
+	grep -w : treat the pattern expression as a single keyword
+	[ex]
+	grep -r 'keyword' ./filename
+****25. find
+	fine location -name 'filename'	: 
+	find / -name '*txt'		: find text files from the root directory
+****26. 

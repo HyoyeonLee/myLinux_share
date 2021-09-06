@@ -1,0 +1,68 @@
+ $ echo $PATH
+/c/Users/hylee/AppData/Roaming/SPB_Data/bin:/mingw64/bin:/usr/local/bin:/usr/bin:/bin:/mingw64/bin:/usr/bin:/c/Users/hylee/AppData/Roaming/SPB_Data/bin:/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/c/Windows/system32:/c/Windows:/c/Windows/System32/Wbem:/c/Windows/System32/WindowsPowerShell/v1.0:/c/Windows/System32/OpenSSH:/cmd:/c/Program Files/TortoiseGit/bin:/mingw64_gcc/mingw64/bin:/mingw64/bin:/c/Program Files/CMake/bin:/c/Program Files (x86)/STMicroelectronics/STM32 ST-LINK Utility/ST-LINK Utility:/c/Program Files/TortoiseSVN/bin:/c/Program Files/VisualSVN Server/bin:/c/Program Files/dotnet:/c/Program Files (x86)/dotnet:/c/Cadence/SPB_16.6/openaccess/bin/win32/opt:/c/Cadence/SPB_16.6/tools/capture:/c/Cadence/SPB_16.6/tools/pspice:/c/Cadence/SPB_16.6/tools/specctra/bin:/c/Cadence/SPB_16.6/tools/fet/bin:/c/Cadence/SPB_16.6/tools/libutil/bin:/c/Cadence/SPB_16.6/tools/bin:/c/Cadence/SPB_16.6/tools/pcb/bin:/c/Users/hylee/AppData/Local/Microsoft/WindowsApps:/c/Users/hylee/.dotnet/tools:/usr/bin/vendor_perl:/usr/bin/core_perl
+
+ $ echo $HOME
+/c/Users/hylee/AppData/Roaming/SPB_Data
+
+ $ echo $LANG
+
+
+ $ echo $TERM
+xterm
+
+ $ echo $USER
+
+
+ $ echo $COLUMNS
+80
+
+ $ echo $PS1
+\[\033]0;$TITLEPREFIX:$PWD\007\]\n\[\033[32m\]\u@\h \[\033[35m\]$MSYSTEM \[\033[33m\]\w\[\033[36m\]`__git_ps1`\[\033[0m\]\n$
+
+ $ echo $BASH
+/usr/bin/bash
+
+$ echo $HISTFILE
+/c/Users/hylee/AppData/Roaming/SPB_Data/.bash_history
+
+$ echo $HOSTNAME
+DESKTOP-OQ0D159
+
+ $ echo $LONGNAME
+
+
+ $ echo $MAIL
+
+
+ $ echo $PWD
+/c/Users/hylee/AppData/Roaming/SPB_Data
+
+ $ echo $SHELL
+/usr/bin/bash
+
+ $ echo $DISPLAY
+needs-to-be-defined
+
+ $ echo $LINES
+24
+
+ $ echo $PS2
+>
+
+ $ echo $BASH_VERSION
+4.4.23(1)-release
+
+ $ echo $HISTSIZE
+500
+
+ $ echo $USERNAME
+hylee
+
+ $ echo $LS_COLORS
+
+
+ $ echo $OSTYPE
+msys
+
+ $
+
