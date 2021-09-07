@@ -60,6 +60,14 @@
 	cp -r dir1 dir2
 ****15. mv : move to other place or rename
 ****16. file filename : show the type of the file
+	file test
+		test: ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), 
+		dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, 
+		BuildID[sha1]=35163a3492ef3c27cdd28a6941fa83ad2735d371, 
+		for GNU/Linux 3.2.0, not stripped
+	file test.c
+		test.c: C source, ASCII text
+
 ****17. cat : (conCATenate : print the file on the screen)
 ****18. more : print text file with a page unit 
 	(spacebar : next page)
@@ -134,3 +142,17 @@
 	fine location -name 'filename'	: 
 	find / -name '*txt'		: find text files from the root directory
 ****26. 
+********************************************
+*					   *
+*LINUX LECTURE NOTE 5~6 		   *
+*					   *
+********************************************
+
+
+****1. make
+	-to compile multiple c files together
+	-only single main() should exist in the entire cfiles.
+	-make : automatically finds makefile where related object files, commands are listed.
+	-see the example in the folder "lab_make"
+	-gcc -c -o : object file created not execution file
+	-gcc -o : create execution file as well.
